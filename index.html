@@ -14,7 +14,13 @@
    <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest minified bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- =======================================================
     Theme Name: Alstar
     Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
@@ -548,6 +554,108 @@ Angular is one of the main Frameworks that we use most for the development of ap
       </div>
     </div>
   </footer>
+
+
+<!-- MODAL COTIZADOR-->
+<div class="modal fade" id="modalForm" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Cotizador </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <p class="statusMsg"></p>
+                <form id="insert_form" data-parsley-validate class="form-horizontal form-label-left" action="controller/cotizador.php" method="post">
+                    <div class="form-group">
+                        <label for="inputName">Nombre Empresa</label>
+                        <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" placeholder="Enter your name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Tipo de app</label>
+                        <select class="form-control" id="tipo" name="tipo">
+                          <option value="android">Android</option>
+                          <option value="ios">iOs</option>
+                          <option value="web">Web</option>
+                          <option value="Multiplataforma">Multiplataforma</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Login</label>
+                        <select class="form-control" id="login" name="login">
+                          <option value="No">No</option>
+                          <option value="Si">Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Perfiles de usuario</label>
+                        <select class="form-control" id="perfil" name="perfil">
+                          <option value="No">No</option>
+                          <option value="Si">Si</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="inputEmail">Diseño de app</label>
+                        <select class="form-control" id="diseño" name="diseño">
+                          <option value="Interfaz">Interfaz</option>
+                          <option value="Diseño Personal">Diseño Personal</option>
+                          <option value="Diseño personal y responsive">Diseño personal y responsive</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Compras</label>
+                        <select class="form-control" id="compras" name="compras">
+                          <option value="No">No</option>
+                          <option value="Si">Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Sincronizacion con la parte web</label>
+                        <select class="form-control" id="sincronizacion" name="sincronizacion">
+                          <option value="No">No</option>
+                          <option value="Si">Si</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Idioma</label>
+                        <select class="form-control" id="idiomas" name="idiomas">
+                          <option value="Un idioma">Un idioma</option>
+                          <option value="Bilingue">Bilingue</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="inputEmail">Etapa de tu proyecto</label>
+                        <select class="form-control" id="etapa" name="etapa">
+                          <option value="Idea">Idea</option>
+                          <option value="Boceto Preparado">Boceto Preparado</option>
+                            <option value="App Desarrollada">App Desarrollada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                          <label for="inputEmail">Panel administracion</label>
+                        <select class="form-control" id="panel" name="panel">
+                            <option value="No">No</option>
+                            <option value="Si">Si</option>
+                        </select>
+                    </div> 
+                    <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary submitBtn">SUBMIT</button>
+            </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer -->
+           
+        </div>
+    </div>
+</div>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
